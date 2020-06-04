@@ -29,7 +29,11 @@ If you have time for it, it’d be nice to see the following implementations. Yo
     - Provide a link or button to a Pokemon’s **Details Page** from their listing in your master list. Also provide a **Back** button from the **Details Page** to return to the list.
 
 ## Steps to clone and run the app.
-- Clone the repository.
+- Clone the repository and move into the app folder.
+- Install the node modules.
+```javascript
+yarn install
+```
 - Run **dev** to execute the app in dev mode.
 ```javascript
 yarn run dev

@@ -49,7 +49,7 @@ yarn run dev
     - **View Next:** To see the next Pokemon details.
 
 ## Extras.
-- The app is responsive, so you can enjoy it in a desktop or also in your mobile device. You can test it by clicking on the following link [Pokedex Challenge](https://dcolon-pokedex-challenge.herokuapp.com/)
+- The app is responsive, so you can enjoy it in a desktop or also in your mobile device. You can test it by clicking on the following link <a href="https://dcolon-pokedex-challenge.herokuapp.com/" target="_blank">Pokedex Challenge</a>.
 
 ## Final Comments.
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

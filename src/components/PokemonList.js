@@ -5,7 +5,6 @@ import history from './../helpers/history'
 
 class PokemonList extends Component {
   handleViewDetails(name) {
-    // const path = name.toLowerCase().replace(' ', '-')
     const path = _.kebabCase(name)
     history.push(`/${path}`)
   }
@@ -21,7 +20,7 @@ class PokemonList extends Component {
           >
             <div className="pokemon">
               <div className="photo-container">
-                <img src={ pokemon.img } className="photo" />
+                <img src={ pokemon.img } className="photo" alt={ pokemon.name } />
               </div>
               <div className="data">
                 <div className="name">

@@ -28,7 +28,7 @@ const Home = (props) => {
       setFilteredBySearch(false)
     } else {
       const pokedexData = types || weaknesses ? filteredPokedex : props.pokedex
-      const filteredData = pokedexData.filter(pokemon => pokemon.name.toLowerCase().startsWith(search))
+      const filteredData = pokedexData.filter(pokemon => pokemon.name.toLowerCase().startsWith(search.toLowerCase()))
       setFilteredPokedex(filteredData)
       setFilteredBySearch(true)
     }

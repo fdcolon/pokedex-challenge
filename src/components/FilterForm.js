@@ -1,11 +1,20 @@
 import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import { connect } from 'react-redux'
+import { Field, formValueSelector, reduxForm } from 'redux-form'
 
 import { ReduxFormInput, ReduxFormSelect } from './form-fields'
 
 const Filter = (props) => {
   const onSubmit = formValues => {
     props.onSubmit(formValues)
+  }
+
+  const handleEmptySearch = searchText => {
+    if (!searchText) {
+      const { formValues } = props
+      formValues.search = ''
+      props.onSubmit(formValues)
+    }
   }
 
   return (
@@ -17,6 +26,7 @@ const Filter = (props) => {
         name="search"
         placeholder="Type a Pokemon name"
         component={ ReduxFormInput }
+        onChange={ (e) => handleEmptySearch(e.target.value) }
       />
 
       <Field
@@ -38,8 +48,19 @@ const Filter = (props) => {
   )
 }
 
+const formName = 'filterForm' 
+const selector = formValueSelector(formName)
+
+const mapStateToProps = state => {
+  return {
+    formValues: selector(state, 'search', 'types', 'weaknesses')
+  }
+}
+
 export default reduxForm({
-  form: 'filterForm',
+  form: formName,
   keepDirtyOnReinitialize: true,
   enableReinitialize: true
-})(Filter);
+})(connect(
+  mapStateToProps
+)(Filter));

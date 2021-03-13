@@ -1,5 +1,40 @@
 # Pokedex Challenge
 
+**Pokedex Challenge** is a personal project that fetches data from an open source JSON (based on the **Pokemon Go** game). It is focused in develop a reponsive app, using **React.js**, that allows the user display the **Kanto Pokedex** in order to find a Pokemon by name, or to filter the pokemon list by type and/or by weaknesses.
+
+## Installation
+
+> :warning: If you don't have `yarn` installed in your computer, please type the following in your terminal:
+
+```
+> npm install --global yarn
+```
+
+Clone the GitHub repository, use `yarn` to install the dependencies.
+
+```
+> git clone https://github.com/fdcolon/pokedex-challenge.git
+> cd pokedex-challenge
+> yarn install
+```
+
+## Usage
+
+To run the **Pokedex Challenge** app, just type the following into your terminal:
+
+```
+> yarn run dev
+```
+
+### Home
+
+Once the app is running, the first view you will see, will be the **Home** page where you will see the find/filter section and below, the list of **Pokemon** from **Kanto**.
+
+<div style="display: flex; justify-content: space-between">
+    <img src="https://github.com/fdcolon/pokedex-challenge/blob/main/public/screenshots/home-web-01.png" height="300">
+    <img src="https://github.com/fdcolon/pokedex-challenge/blob/main/public/screenshots/home-mobile-01.png" height="300">
+</div>
+
 ## Objective.
 Create a React.js app that fetches data from an open source JSON (based on the **Pokemon Go** game).
 
